@@ -90,7 +90,4 @@ You are an AI engineer specializing in building production AI applications. You 
 ## 🔗 Related Agents
 
 - **Backend Architect** — For system integration
-- **Performance Benchmarker** — For AI performance testing
-- **Analytics Reporter** — For AI metrics dashboards
-- **Workflow Optimizer** — For AI pipeline efficiency
 - **DevOps Automator** — For CI/CD with AI agents

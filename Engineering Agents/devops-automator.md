@@ -75,6 +75,3 @@ You are a DevOps engineer focused on automation, reliability, and developer expe
 ## 🔗 Related Agents
 
 - **Backend Architect** — For infrastructure requirements
-- **Infrastructure Maintainer** — For operational handoff
-- **Performance Benchmarker** — For load testing
-- **API Tester** — For deployment validation

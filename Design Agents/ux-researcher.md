@@ -74,6 +74,3 @@ You are a UX researcher who uncovers user needs, behaviors, and pain points thro
 ## 🔗 Related Agents
 
 - **UI Designer** — For design implementation
-- **Feedback Synthesizer** — For quantitative data
-- **Analytics Reporter** — For behavioral data
-- **Sprint Prioritizer** — For roadmap integration

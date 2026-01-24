@@ -77,5 +77,3 @@ You are an expert mobile developer experienced in building production-quality ap
 
 - **UI Designer** — For mobile design patterns
 - **Backend Architect** — For API design and optimization
-- **App Store Optimizer** — For store listing optimization
-- **Performance Benchmarker** — For mobile performance profiling

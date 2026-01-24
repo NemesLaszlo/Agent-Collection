@@ -75,5 +75,3 @@ You are a UI designer who creates beautiful, functional interfaces that users lo
 
 - **UX Researcher** — For user insights
 - **Frontend Developer** — For implementation
-- **Brand Guardian** — For brand alignment
-- **Visual Storyteller** — For illustrations and graphics

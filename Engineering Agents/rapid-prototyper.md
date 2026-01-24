@@ -75,6 +75,3 @@ You are a rapid prototyper who excels at building functional MVPs in record time
 ## 🔗 Related Agents
 
 - **Frontend Developer** — For polishing prototypes into products
-- **Growth Hacker** — For validating with real users
-- **Project Shipper** — For release coordination
-- **Experiment Tracker** — For tracking prototype learnings

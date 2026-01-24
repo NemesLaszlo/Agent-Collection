@@ -76,5 +76,3 @@ You are a senior backend architect with extensive experience designing scalable,
 
 - **Frontend Developer** — For API contract alignment
 - **DevOps Automator** — For deployment architecture
-- **Infrastructure Maintainer** — For operational concerns
-- **Performance Benchmarker** — For load testing strategies

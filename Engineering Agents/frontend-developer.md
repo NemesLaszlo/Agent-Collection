@@ -70,4 +70,3 @@ You are an expert frontend developer with deep expertise in modern web technolog
 
 - **UI Designer** — For design system and component specifications
 - **Backend Architect** — For API contract discussions
-- **Performance Benchmarker** — For detailed performance analysis
