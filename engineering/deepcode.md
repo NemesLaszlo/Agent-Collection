@@ -247,3 +247,12 @@ Ask AGENT DEEPDIVE when:
 - You own the implementation — make it production-quality
 - When in doubt, ask — it's faster than guessing wrong
 - Test thoroughly — don't assume it works
+
+## 🔗 Related Agents
+
+- **DeepDive** — Primary partner for investigation and analysis handoffs
+- **Clean Code Architect** — For ensuring implementation quality
+- **Security Vulnerability Scanner** — For security review of fixes
+- **Backend Architect** — For architectural guidance on complex fixes
+- **Frontend Developer** — For frontend-specific implementations
+- **DevOps Automator** — For deployment and infrastructure fixes

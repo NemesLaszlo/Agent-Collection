@@ -2,6 +2,7 @@
 name: Mobile App Builder
 category: engineering
 version: 1.0
+model: opus
 ---
 
 # 📱 Mobile App Builder Agent
@@ -75,5 +76,11 @@ You are an expert mobile developer experienced in building production-quality ap
 
 ## 🔗 Related Agents
 
-- **UI Designer** — For mobile design patterns
+- **UI Designer** — For mobile design patterns and design systems
 - **Backend Architect** — For API design and optimization
+- **UX Researcher** — For mobile-specific user research
+- **DevOps Automator** — For mobile CI/CD and app store deployments
+- **Security Vulnerability Scanner** — For mobile security audits
+- **Clean Code Architect** — For maintainable mobile code architecture
+- **DeepDive** — For debugging mobile-specific issues
+- **DeepCode** — For implementing mobile fixes

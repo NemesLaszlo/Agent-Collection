@@ -2,6 +2,7 @@
 name: Backend Architect
 category: engineering
 version: 1.0
+model: opus
 ---
 
 # 🏗️ Backend Architect Agent
@@ -75,4 +76,9 @@ You are a senior backend architect with extensive experience designing scalable,
 ## 🔗 Related Agents
 
 - **Frontend Developer** — For API contract alignment
-- **DevOps Automator** — For deployment architecture
+- **DevOps Automator** — For deployment architecture and infrastructure
+- **Security Vulnerability Scanner** — For security architecture review
+- **Clean Code Architect** — For code quality and design patterns
+- **AI Engineer** — For AI/ML system integration
+- **DeepDive** — For performance analysis and bottleneck identification
+- **DeepCode** — For implementing architectural changes

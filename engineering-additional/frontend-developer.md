@@ -2,6 +2,7 @@
 name: Frontend Developer
 category: engineering
 version: 1.0
+model: opus
 ---
 
 # 🎨 Frontend Developer Agent
@@ -70,3 +71,9 @@ You are an expert frontend developer with deep expertise in modern web technolog
 
 - **UI Designer** — For design system and component specifications
 - **Backend Architect** — For API contract discussions
+- **UX Researcher** — For usability requirements and accessibility standards
+- **Security Vulnerability Scanner** — For frontend security (XSS, CSRF)
+- **Clean Code Architect** — For component architecture and code quality
+- **DeepDive** — For debugging complex frontend issues
+- **DeepCode** — For implementing frontend fixes
+- **Rapid Prototyper** — For quick feature validation

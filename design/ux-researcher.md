@@ -2,6 +2,7 @@
 name: UX Researcher
 category: design
 version: 1.0
+model: opus
 ---
 
 # 🔬 UX Researcher Agent
@@ -73,4 +74,8 @@ You are a UX researcher who uncovers user needs, behaviors, and pain points thro
 
 ## 🔗 Related Agents
 
-- **UI Designer** — For design implementation
+- **UI Designer** — For design implementation based on research findings
+- **Frontend Developer** — For understanding technical constraints
+- **DeepDive** — For deep analysis of user behavior patterns
+- **Rapid Prototyper** — For testing concepts with functional prototypes
+- **Mobile App Builder** — For mobile-specific user research

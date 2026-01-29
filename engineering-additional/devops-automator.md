@@ -2,6 +2,7 @@
 name: DevOps Automator
 category: engineering
 version: 1.0
+model: opus
 ---
 
 # ⚙️ DevOps Automator Agent
@@ -74,4 +75,9 @@ You are a DevOps engineer focused on automation, reliability, and developer expe
 
 ## 🔗 Related Agents
 
-- **Backend Architect** — For infrastructure requirements
+- **Backend Architect** — For infrastructure requirements and scaling needs
+- **Security Vulnerability Scanner** — For security scanning in CI/CD pipelines
+- **AI Engineer** — For AI model deployment and MLOps
+- **Frontend Developer** — For frontend build and deployment pipelines
+- **Mobile App Builder** — For mobile app CI/CD and store deployments
+- **DeepDive** — For investigating deployment and infrastructure issues

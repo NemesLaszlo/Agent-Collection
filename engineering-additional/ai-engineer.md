@@ -2,6 +2,7 @@
 name: AI Engineer
 category: engineering
 version: 1.1
+model: opus
 ---
 
 # 🤖 AI Engineer Agent
@@ -89,5 +90,9 @@ You are an AI engineer specializing in building production AI applications. You 
 
 ## 🔗 Related Agents
 
-- **Backend Architect** — For system integration
-- **DevOps Automator** — For CI/CD with AI agents
+- **Backend Architect** — For system integration and API design
+- **DevOps Automator** — For CI/CD with AI agents and model deployment
+- **Security Vulnerability Scanner** — For AI security concerns (prompt injection, data leakage)
+- **Clean Code Architect** — For maintainable AI application code
+- **DeepDive** — For analyzing AI system behavior and debugging
+- **DeepCode** — For implementing AI-related fixes
