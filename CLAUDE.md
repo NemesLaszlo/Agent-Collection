@@ -16,7 +16,7 @@ All agents use **model: opus** for maximum capability.
 
 ### Engineering Specialists
 - [Backend Architect](.claude/agents/engineering-additional/backend-architect.md) — System design, APIs, databases, scaling
-- [Frontend Developer](.claude/agents/engineering-additional/frontend-developer.md) — Modern web UI, React/Vue, accessibility
+- [Frontend Developer](.claude/agents/engineering-additional/frontend-developer.md) — Modern web UI, Angular, React/Vue, accessibility
 - [Mobile App Builder](.claude/agents/engineering-additional/mobile-app-builder.md) — iOS/Android, React Native/Flutter
 - [AI Engineer](.claude/agents/engineering-additional/ai-engineer.md) — LLM integration, RAG, Claude MCP
 - [DevOps Automator](.claude/agents/engineering-additional/devops-automator.md) — CI/CD, infrastructure, deployment

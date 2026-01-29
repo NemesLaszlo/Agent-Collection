@@ -1,0 +1,28 @@
+# Claude Code local files
+.claude/settings.local.json
+.claude/todos.json
+.claude/todos.local.json
+.claude/logs/
+.claude/cache/
+.claude/mcp-logs/
+.claude/*.log
+
+# Keep agents directory but ignore local overrides
+.claude/agents/**/*.local.md
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+nul
