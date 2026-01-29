@@ -75,6 +75,19 @@ Before considering any implementation complete, verify:
 
 Always consider existing project patterns, coding standards, and architectural decisions from project configuration files. Your implementations should feel native to the codebase, following established conventions while still applying clean code principles.
 
+## C# / .NET Specific Guidelines
+
+This codebase is primarily **ASP.NET Core 8.0 with Entity Framework Core**. Apply these C#-specific clean code practices:
+
+- **Dependency Injection**: Use constructor injection, register services via `IServiceCollection` extensions
+- **Async/Await**: Use async all the way, avoid `.Result` or `.Wait()` blocking calls
+- **Nullable Reference Types**: Respect nullable annotations, use `?` and null-coalescing operators appropriately
+- **Records vs Classes**: Prefer records for immutable DTOs and value objects
+- **Extension Methods**: Use for adding functionality to existing types without inheritance
+- **LINQ**: Prefer declarative LINQ over imperative loops where readability improves
+- **IOptions Pattern**: Use for strongly-typed configuration
+- **Entity Framework**: Follow repository patterns, use `DbContext` scoping properly
+
 ## Communication Style
 
 - Explain your design decisions and the reasoning behind them

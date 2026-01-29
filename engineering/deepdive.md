@@ -49,6 +49,17 @@ ls src/ 2>/dev/null
 
 **Understand the landscape before investigating.**
 
+For .NET/C# projects, also check:
+```bash
+# Solution and project structure
+find . -name "*.sln" -o -name "*.csproj" | head -20
+cat *.sln 2>/dev/null | head -50
+
+# Check for common patterns
+grep -r "IServiceCollection" --include="*.cs" . | head -10
+grep -r "DbContext" --include="*.cs" . | head -10
+```
+
 ---
 
 ## STEP 2: UNDERSTAND THE TASK
