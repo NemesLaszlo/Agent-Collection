@@ -2,8 +2,6 @@
 
 This project uses the following agents:
 
-mkdir -p .claude/agents/design .claude/agents/engineering .claude/agents/engineering-additional
-
 ## Active Agents
 
 All agents use **model: opus** for maximum capability.

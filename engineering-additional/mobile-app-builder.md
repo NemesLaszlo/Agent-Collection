@@ -1,6 +1,6 @@
 ---
-name: Mobile App Builder
-category: engineering
+name: mobile-app-builder
+description: Use this agent for iOS and Android app development with React Native or Flutter. This includes cross-platform development, native integrations, mobile UX patterns, app store compliance, and mobile performance optimization.
 version: 1.0
 model: opus
 ---

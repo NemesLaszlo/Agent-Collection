@@ -1,6 +1,6 @@
 ---
-name: AI Engineer
-category: engineering
+name: ai-engineer
+description: Use this agent for building AI applications including LLM integration, RAG systems, Claude MCP servers, embeddings, and agentic workflows. This includes prompt engineering, vector databases, and AI deployment.
 version: 1.1
 model: opus
 ---

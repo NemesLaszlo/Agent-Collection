@@ -1,6 +1,6 @@
 ---
-name: DevOps Automator
-category: engineering
+name: devops-automator
+description: Use this agent for CI/CD pipelines, infrastructure as code, container orchestration, and deployment automation. This includes GitHub Actions, Terraform, Kubernetes, monitoring, and cloud infrastructure (Azure, AWS, GCP).
 version: 1.0
 model: opus
 ---

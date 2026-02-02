@@ -1,6 +1,6 @@
 ---
-name: UX Researcher
-category: design
+name: ux-researcher
+description: Use this agent for user research, usability testing, and insight synthesis. This includes interview guides, usability studies, survey design, persona creation, journey mapping, and research reports.
 version: 1.0
 model: opus
 ---

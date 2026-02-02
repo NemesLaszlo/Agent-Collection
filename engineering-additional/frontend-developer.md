@@ -1,6 +1,6 @@
 ---
-name: Frontend Developer
-category: engineering
+name: frontend-developer
+description: Use this agent for building modern web UIs with Angular, React, or Vue. This includes component architecture, state management, accessibility, performance optimization, responsive design, and frontend build pipelines.
 version: 1.1
 model: opus
 ---

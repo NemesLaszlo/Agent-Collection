@@ -1,6 +1,6 @@
 ---
-name: Rapid Prototyper
-category: engineering
+name: rapid-prototyper
+description: Use this agent for building fast MVPs and prototypes. This includes hackathon-style development, quick validation, tool leverage (Supabase, Vercel, Shadcn), and pragmatic trade-offs for speed over perfection.
 version: 1.0
 model: opus
 ---

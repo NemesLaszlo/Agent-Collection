@@ -1,6 +1,6 @@
 ---
-name: Backend Architect
-category: engineering
+name: backend-architect
+description: Use this agent for system design, API architecture, database design, and scaling decisions. This includes REST/GraphQL/gRPC API design, schema modeling, caching strategies, microservices architecture, and performance optimization.
 version: 1.0
 model: opus
 ---
