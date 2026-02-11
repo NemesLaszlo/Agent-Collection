@@ -4,8 +4,8 @@ A curated library of specialized Claude AI agents designed for production softwa
 
 ## Overview
 
-This collection provides **12 specialized agents** across three domains:
-- **Engineering Core** (4 agents) - Code quality, investigation, implementation, security
+This collection provides **13 specialized agents** across three domains:
+- **Engineering Core** (5 agents) - Feature planning, code quality, investigation, implementation, security
 - **Engineering Specialists** (6 agents) - Backend, frontend, mobile, AI, DevOps, prototyping
 - **Design** (2 agents) - UI design, UX research
 
@@ -13,21 +13,34 @@ All agents use **Claude Opus** for maximum capability.
 
 ## Quick Start
 
-### Using Agents in Your Project
+### Using Agents and Skills in Your Project
 
 1. Copy the desired agent files to your project's `.claude/agents/` directory
-2. Reference agents in your project's `CLAUDE.md` file
-3. Invoke agents through Claude Code CLI
+2. Copy the desired skill folders to your project's `.claude/skills/` directory
+3. Reference agents and skills in your project's `CLAUDE.md` file
+4. Invoke agents through Claude Code CLI, or use `/skill-name` shortcuts
 
 ```bash
 # Example project structure
 your-project/
 ├── .claude/
-│   └── agents/
-│       ├── engineering/
-│       │   └── clean-code-architect.md
-│       └── design/
-│           └── ui-designer.md
+│   ├── agents/
+│   │   ├── engineering/
+│   │   │   ├── feature-planner.md
+│   │   │   └── clean-code-architect.md
+│   │   └── design/
+│   │       └── ui-designer.md
+│   └── skills/
+│       ├── plan-feature/
+│       │   └── SKILL.md
+│       ├── investigate/
+│       │   └── SKILL.md
+│       ├── review/
+│       │   └── SKILL.md
+│       ├── security-scan/
+│       │   └── SKILL.md
+│       └── explore/
+│           └── SKILL.md
 └── CLAUDE.md
 ```
 
@@ -39,10 +52,20 @@ your-project/
 ## Active Agents
 
 ### Engineering
+- [Feature Planner](.claude/agents/engineering/feature-planner.md) — Three-phase validation
 - [Clean Code Architect](.claude/agents/engineering/clean-code-architect.md) — Quality code implementation
 
 ### Design
 - [UI Designer](.claude/agents/design/ui-designer.md) — Visual design and components
+
+### Available Skills
+| Skill | Trigger | Purpose |
+|---|---|---|
+| `/plan-feature` | `/plan-feature [description]` | Run 3-phase Feature Planner validation |
+| `/investigate` | `/investigate [problem]` | Deep root cause analysis |
+| `/review` | `/review [file or blank]` | Code review |
+| `/security-scan` | `/security-scan [target or blank]` | Security vulnerability scan |
+| `/explore` | `/explore [question]` | Codebase exploration |
 ```
 
 ## Agent Catalog
@@ -51,6 +74,7 @@ your-project/
 
 | Agent | Purpose | Best For |
 |-------|---------|----------|
+| **[Feature Planner](engineering/feature-planner.md)** | Three-phase validation before implementation | Feature planning, spec validation, edge case analysis, risk assessment |
 | **[Clean Code Architect](engineering/clean-code-architect.md)** | Quality code with DRY, SOLID principles | Feature implementation, refactoring, creating reusable modules |
 | **[DeepDive](engineering/deepdive.md)** | Deep investigation and root cause analysis | Bug investigation, performance issues, architectural problems |
 | **[DeepCode](engineering/deepcode.md)** | Implementation partner for DeepDive | Executing fixes based on investigation findings |
@@ -108,6 +132,15 @@ Prototype → Production
 │ Rapid       │ ──► │ Frontend Dev / Backend Architect│
 │ Prototyper  │     └─────────────────────────────────┘
 └─────────────┘
+
+Feature Planning → Implementation (Recommended for all non-trivial features)
+┌─────────────┐     ┌──────────────────────────────────────────────┐
+│ Feature     │ ──► │ Clean Code Architect / Frontend Dev /        │
+│ Planner     │     │ Backend Architect / DeepCode                 │
+└─────────────┘     └──────────────────────────────────────────────┘
+  Phase 1: Domain & Spec Validation
+  Phase 2: Task Validation (edge cases, security, data, rollback)
+  Phase 3: Implementation Plan Validation
 ```
 
 ## Technology Coverage
@@ -133,6 +166,71 @@ Prototype → Production
 - **Cross-platform:** React Native, Flutter
 - **Native:** SwiftUI, Kotlin/Compose
 
+## Skills (Slash Commands)
+
+Skills are one-tap shortcuts that invoke agent workflows. Copy them to `.claude/skills/` in your project.
+
+### Project Skills
+
+These get copied per-project alongside agents.
+
+| Skill | Command | What It Does | When to Use |
+|-------|---------|-------------|-------------|
+| **plan-feature** | `/plan-feature add user authentication` | Runs all 3 Feature Planner validation phases (domain/specs, task validation, implementation plan) and produces an implementation-ready plan | Before implementing any medium-to-large feature |
+| **investigate** | `/investigate why login fails after token refresh` | Runs the DeepDive agent workflow — deep codebase investigation, root cause analysis, structured handoff for implementation | Bug reports, performance issues, unexpected behavior |
+| **review** | `/review` or `/review src/auth/` | Reviews staged changes or specific files against Clean Code Architect principles — checks quality, security, maintainability | Before committing, after finishing a feature, PR reviews |
+| **security-scan** | `/security-scan` or `/security-scan src/api/` | Runs Security Vulnerability Scanner — OWASP Top 10, injection, auth, data exposure, dependency CVEs | Before deployment, after touching auth/data/API code |
+| **explore** | `/explore how does the payment flow work` | Quick codebase exploration — traces flows, maps architecture, explains mechanisms | Understanding unfamiliar code before making changes |
+
+### User-Level Skill
+
+This lives in `~/.claude/skills/` and is available across all projects.
+
+| Skill | Command | What It Does |
+|-------|---------|-------------|
+| **setup-agents** | `/setup-agents fullstack` | Analyzes project type, recommends agents, copies files, generates CLAUDE.md section |
+
+### Installing Skills
+
+```bash
+# Project skills — copy to your project
+cp -r Agent-Collection/skills/* your-project/.claude/skills/
+
+# User-level skill — copy once to your home directory
+cp -r Agent-Collection/user-skills/* ~/.claude/skills/
+```
+
+### Recommended Feature Workflow
+
+Choose the right approach based on feature size:
+
+| Feature Size | Approach | Example |
+|---|---|---|
+| **Small** (single task, clear scope) | Normal plan mode — skip the Feature Planner | Add a tooltip, fix a typo, rename a field |
+| **Medium-to-large** (multiple tasks, touches data/auth/APIs) | `/plan-feature` — run all 3 phases | New CRUD module, auth flow, payment integration |
+| **Exploratory** (unknowns, need to spike first) | `/investigate` first → then `/plan-feature` | Unfamiliar legacy code, unknown API behavior |
+
+For medium-to-large features:
+
+```
+1. Feature Idea
+   ↓
+2. /plan-feature [description]
+   Phase 1: Domain & Spec Validation
+   Phase 2: Task Validation (edge cases, security, data, rollback)
+   Phase 3: Implementation Plan Validation
+   ↓
+3. Validated plan with refined tasks
+   ↓
+4. /task for each validated task
+   ↓
+5. Implementation (using assigned subagents)
+   ↓
+6. /review before committing
+   ↓
+7. /security-scan before deploying
+```
+
 ## Creating Custom Agents
 
 Use the provided template to create new agents:
@@ -148,6 +246,7 @@ See [agent-template.md](agent-template.md) for the full template structure.
 ```
 Agent-Collection/
 ├── engineering/                    # Core engineering agents
+│   ├── feature-planner.md
 │   ├── clean-code-architect.md
 │   ├── deepcode.md
 │   ├── deepdive.md
@@ -162,6 +261,20 @@ Agent-Collection/
 ├── design/                         # Design agents
 │   ├── ui-designer.md
 │   └── ux-researcher.md
+├── skills/                         # Project-level skills (copy to .claude/skills/)
+│   ├── plan-feature/
+│   │   └── SKILL.md
+│   ├── investigate/
+│   │   └── SKILL.md
+│   ├── review/
+│   │   └── SKILL.md
+│   ├── security-scan/
+│   │   └── SKILL.md
+│   └── explore/
+│       └── SKILL.md
+├── user-skills/                    # User-level skills (copy to ~/.claude/skills/)
+│   └── setup-agents/
+│       └── SKILL.md
 ├── agent-template.md               # Template for new agents
 ├── CLAUDE.md                       # Project configuration
 └── README.md
@@ -173,6 +286,7 @@ Agent-Collection/
 
 ```markdown
 ## Recommended Agents
+- Feature Planner — Validate specs and plans before implementation
 - Backend Architect — API design, EF Core, Azure services
 - Frontend Developer — Angular components, RxJS, accessibility
 - Clean Code Architect — C# best practices, SOLID principles
@@ -184,6 +298,7 @@ Agent-Collection/
 
 ```markdown
 ## Recommended Agents
+- Feature Planner — Lightweight validation to avoid rework
 - Rapid Prototyper — Quick iteration, shipping fast
 - Backend Architect — Scalable foundation
 - UI Designer — Design system from day one
@@ -193,6 +308,7 @@ Agent-Collection/
 
 ```markdown
 ## Recommended Agents
+- Feature Planner — Full three-phase validation for every feature
 - DeepDive — Analyze legacy code
 - Backend Architect — Modern architecture planning
 - Security Vulnerability Scanner — Compliance audit
